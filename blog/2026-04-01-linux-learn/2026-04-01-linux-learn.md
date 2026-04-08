@@ -10,6 +10,8 @@ tags: [linux, 学习笔记]
 # Linux 学习笔记
 本blog記錄筆者在AWS EC2上學習Linux的過程，主要涵蓋了Linux的基本命令、文件系統、權限管理、軟件安裝和網絡配置等方面的內容。
 
+<!-- truncate -->
+
 ## DAY1
 ![創建一個新的EC2實例](linux-create.png)
 

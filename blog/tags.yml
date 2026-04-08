@@ -1,19 +1,9 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+linux:
+  label: Linux
+  permalink: /linux
+  description: Linux 相關文章
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+学习笔记:
+  label: 学习笔记
+  permalink: /study-notes
+  description: 学习笔记相关文章
