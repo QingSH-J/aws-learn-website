@@ -1,9 +1,9 @@
 ---
 slug: linux-learn
-title: Linux 学习笔记
+title: Linux 學習筆記
 authors: [jinshan]
 date: 2026-04-01
-tags: [linux, 学习笔记]
+tags: [linux, 學習筆記]
 ---
 
 
