@@ -1,30 +1,270 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* src/css/custom.css — editorial magazine redesign */
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Infima primary — used by buttons/links across Docusaurus */
+  --ifm-color-primary: #a8472a;
+  --ifm-color-primary-dark: #952f1f;
+  --ifm-color-primary-darker: #8b291c;
+  --ifm-color-primary-darkest: #6e2017;
+  --ifm-color-primary-light: #b95a3d;
+  --ifm-color-primary-lighter: #c4633a;
+  --ifm-color-primary-lightest: #d18460;
+
+  --ifm-background-color: #f6f2ea;
+  --ifm-color-content: #1a1714;
+  --ifm-color-content-secondary: #736b62;
+  --ifm-color-emphasis-100: #efe9de;
+  --ifm-color-emphasis-200: #e3ddd2;
+  --ifm-color-emphasis-300: #d6cebf;
+
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --ifm-heading-font-family: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+  --ifm-heading-font-weight: 500;
+
+  --ifm-navbar-background-color: #f6f2ea;
+  --ifm-navbar-shadow: 0 1px 0 #e3ddd2;
+  --ifm-footer-background-color: #f6f2ea;
+
+  /* qsy-* tokens */
+  --qsy-paper: #f6f2ea;
+  --qsy-paper-2: #efe9de;
+  --qsy-ink: #1a1714;
+  --qsy-muted: #736b62;
+  --qsy-faint: #aaa39a;
+  --qsy-line: #e3ddd2;
+  --qsy-accent: #a8472a;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.06);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #d96a3e;
+  --ifm-background-color: #13110e;
+  --ifm-color-content: #f0ebe0;
+  --ifm-color-emphasis-100: #1a1714;
+  --ifm-color-emphasis-200: #2a251f;
+
+  --qsy-paper: #13110e;
+  --qsy-paper-2: #1a1714;
+  --qsy-ink: #f0ebe0;
+  --qsy-muted: #a8a098;
+  --qsy-faint: #5a544c;
+  --qsy-line: #2a251f;
+  --qsy-accent: #d96a3e;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+}
+
+/* ============ Editorial home page ============ */
+
+.qsy-home {
+  font-family: var(--ifm-font-family-base);
+  color: var(--qsy-ink);
+  background: var(--qsy-paper);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.qsy-eyebrow {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12px;
+  color: var(--qsy-accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.qsy-eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--qsy-accent);
+  flex-shrink: 0;
+}
+
+.qsy-hero {
+  padding: 88px 72px 72px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 80px;
+  border-bottom: 1px solid var(--qsy-line);
+}
+.qsy-h1 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 500;
+  font-size: 92px;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  margin: 0 0 28px;
+  color: var(--qsy-ink);
+}
+.qsy-h1 em { font-style: italic; font-weight: 400; }
+
+.qsy-lead {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--qsy-ink);
+  opacity: 0.78;
+  margin: 0 0 36px;
+  max-width: 580px;
+}
+
+.qsy-cta {
+  padding: 12px 22px;
+  border-radius: 4px;
+  background: var(--qsy-ink);
+  color: var(--qsy-paper) !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background .15s;
+}
+.qsy-cta:hover { background: #000; }
+[data-theme='dark'] .qsy-cta:hover { background: #fff; color: #000 !important; }
+
+.qsy-cta-secondary {
+  font-size: 14px;
+  color: var(--qsy-muted) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--qsy-line);
+  text-underline-offset: 4px;
+  margin-left: 14px;
+}
+
+.qsy-arrow {
+  font-family: var(--ifm-heading-font-family);
+  font-style: italic;
+}
+
+.qsy-colophon {
+  border-left: 1px solid var(--qsy-line);
+  padding-left: 32px;
+  padding-top: 8px;
+}
+.qsy-colophon dl { margin: 0; }
+.qsy-colophon-label {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 11px;
+  color: var(--qsy-faint);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.qsy-colophon-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px dotted var(--qsy-line);
+  font-size: 13px;
+}
+.qsy-colophon-row dt { color: var(--qsy-muted); margin: 0; }
+.qsy-colophon-row dd { color: var(--qsy-ink); text-align: right; margin: 0; }
+.qsy-colophon-row .mono {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12px;
+}
+
+.qsy-section { padding: 64px 72px 72px; }
+.qsy-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+.qsy-section-title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--qsy-ink);
+}
+
+.qsy-toc {
+  padding: 72px 72px 80px;
+  background: var(--qsy-paper-2);
+  border-top: 1px solid var(--qsy-line);
+  border-bottom: 1px solid var(--qsy-line);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 56px;
+}
+.qsy-toc-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 200px 24px;
+  gap: 28px;
+  align-items: center;
+  padding: 24px 0;
+  border-top: 1px solid var(--qsy-line);
+  color: var(--qsy-ink) !important;
+  text-decoration: none !important;
+  transition: background .15s;
+}
+.qsy-toc-row:hover { background: var(--qsy-paper); }
+.qsy-toc-row:hover .qsy-toc-arrow { transform: translateX(4px); }
+.qsy-toc-row:last-child { border-bottom: 1px solid var(--qsy-line); }
+.qsy-toc-idx {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 13px;
+  color: var(--qsy-faint);
+}
+.qsy-toc-name {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+.qsy-toc-en {
+  font-family: var(--ifm-heading-font-family);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--qsy-faint);
+  margin-left: 12px;
+  font-weight: 400;
+}
+.qsy-toc-desc {
+  color: var(--qsy-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 4px 0 0;
+}
+.qsy-toc-arrow {
+  font-family: var(--ifm-heading-font-family);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--qsy-muted);
+  transition: transform .15s;
+}
+.qsy-tag {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 11px;
+  color: var(--qsy-muted);
+  padding: 2px 7px;
+  border: 1px solid var(--qsy-line);
+  border-radius: 3px;
+  background: var(--qsy-paper);
+}
+
+/* Tone navbar to match editorial palette */
+.navbar { border-bottom: 1px solid var(--qsy-line); box-shadow: none; }
+.navbar__brand { font-family: var(--ifm-heading-font-family); font-style: italic; font-weight: 500; }
+
+@media (max-width: 996px) {
+  .qsy-hero, .qsy-toc {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 48px 24px;
+  }
+  .qsy-h1 { font-size: 56px; }
+  .qsy-section { padding: 48px 24px; }
+  .qsy-toc-row { grid-template-columns: 40px 1fr 24px; }
+  .qsy-toc-row > div:nth-child(3) { display: none; }
 }

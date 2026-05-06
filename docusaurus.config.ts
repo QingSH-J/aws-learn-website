@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'AWS 學習筆記',
-  tagline: '記錄我的 AWS 雲端學習歷程，從入門到實戰',
+  title: 'Qingshiyuu',
+  tagline: '記錄學習雲端與 AI 的歷程，邊學邊寫。',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -34,6 +34,10 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap',
+  ],
 
   plugins: [
     [
@@ -87,7 +91,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'AWS 學習筆記',
+      title: 'Qingshiyuu',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -122,7 +126,7 @@ const config: Config = {
           ],
         },
         {
-          title: '資源',
+          title: '雲端資源',
           items: [
             {
               label: 'AWS 官方文件',
@@ -131,6 +135,19 @@ const config: Config = {
             {
               label: 'AWS 架構中心',
               href: 'https://aws.amazon.com/architecture',
+            },
+          ],
+        },
+        {
+          title: 'AI 資源',
+          items: [
+            {
+              label: 'Amazon Bedrock 文件',
+              href: 'https://docs.aws.amazon.com/bedrock',
+            },
+            {
+              label: 'Claude API 文件',
+              href: 'https://docs.anthropic.com',
             },
           ],
         },
@@ -144,7 +161,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} AWS 學習筆記. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} · Built with Docusaurus · qingshiyuu.com`,
     },
     prism: {
       theme: prismThemes.github,

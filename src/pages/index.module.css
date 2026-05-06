@@ -1,81 +1,152 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* src/pages/index.module.css — page-scoped styles for the editorial home */
 
-.heroBanner {
-  padding: 5rem 0 4rem;
-  text-align: center;
-  position: relative;
+.metaCount {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12px;
+  color: var(--qsy-faint);
+}
+.allLink {
+  font-size: 13px;
+  color: var(--qsy-muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.recentGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+}
+.featured { padding-right: 24px; }
+.postMeta {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 11px;
+  color: var(--qsy-muted);
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.postTag { color: var(--qsy-accent); font-weight: 500; text-transform: uppercase; }
+.tagAccent { color: var(--qsy-accent); }
+.metaDot { color: var(--qsy-faint); }
+.featuredTitle {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: var(--qsy-ink);
+}
+.featuredExcerpt {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 18px;
+  line-height: 1.55;
+  color: #3d362e;
+  margin: 0 0 20px;
+  max-width: 540px;
+}
+.continueLink {
+  font-size: 13px;
+  color: var(--qsy-muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--qsy-ink);
+  padding-bottom: 2px;
+}
+
+.recentList { border-left: 1px solid var(--qsy-line); padding-left: 32px; }
+.recentItem { padding: 18px 0; border-bottom: 1px solid var(--qsy-line); }
+.recentItem:last-child { border-bottom: none; }
+.recentTitle {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+.recentTitle a { color: var(--qsy-ink); text-decoration: none; }
+.recentTitle a:hover { color: var(--qsy-accent); }
+.recentExcerpt {
+  font-size: 13px;
+  color: var(--qsy-muted);
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 3rem 1rem;
-  }
+.tocBigTitle {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
 }
-
-.awsBadge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 20px;
-  padding: 0.3rem 1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  margin-bottom: 1rem;
+.tocIntro {
+  color: var(--qsy-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 240px;
 }
+.tagRow { display: flex; gap: 6px; flex-wrap: wrap; }
 
-.buttons {
-  display: flex;
+.examGrid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; }
+.examTitle {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+.examTitle em { font-style: italic; }
+.examIntro { color: var(--qsy-muted); font-size: 15px; line-height: 1.65; max-width: 380px; margin: 0; }
+.examTable {}
+.examRow {
+  display: grid;
+  grid-template-columns: 110px 1fr 110px 80px;
+  gap: 16px;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  flex-wrap: wrap;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--qsy-line);
+}
+.examRow:first-child { border-top: 1px solid var(--qsy-line); }
+.examCode {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 13px;
+  color: var(--qsy-ink);
+  font-weight: 500;
+}
+.examName { font-size: 14px; color: var(--qsy-muted); }
+.examStatus {
+  font-size: 12px;
+  font-family: var(--ifm-font-family-monospace);
+  color: var(--qsy-faint);
+}
+.examStatus[data-status='已通過'] { color: #2f7553; }
+.examStatus[data-status='備考中'] { color: var(--qsy-accent); }
+.examDate {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12px;
+  color: var(--qsy-faint);
+  text-align: right;
 }
 
-.btnOutline {
-  margin-left: 0;
-}
-
-.stats {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 3rem;
-  opacity: 0.85;
-}
-
-.statItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.statNum {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.statLabel {
-  font-size: 0.8rem;
-  opacity: 0.8;
-  margin-top: 0.2rem;
-}
-
-.statDivider {
-  width: 1px;
-  height: 2.5rem;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-@media screen and (max-width: 600px) {
-  .stats {
-    gap: 1rem;
-  }
+@media (max-width: 996px) {
+  .recentGrid, .examGrid { grid-template-columns: 1fr; gap: 32px; }
+  .recentList { border-left: none; padding-left: 0; border-top: 1px solid var(--qsy-line); padding-top: 16px; }
+  .featuredTitle { font-size: 28px; }
+  .examTitle, .tocBigTitle { font-size: 32px; }
 }
