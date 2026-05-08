@@ -139,9 +139,6 @@ function ExamProgress() {
             考試,<br />
             <em>誠實地記錄。</em>
           </h2>
-          <p className={styles.examIntro}>
-            不是炫耀，而是自我約束。每張證照背後都是幾百小時的閱讀、實作、反覆做題。
-          </p>
         </div>
         <div className={styles.examTable}>
           {EXAMS.map((e) => (
