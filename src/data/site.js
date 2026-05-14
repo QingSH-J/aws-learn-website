@@ -46,12 +46,12 @@ export const RECENT = [
     slug: '2026/04/13/redis-learn',
   },
   {
-    date: '2025-04-11',
+    date: '2026-04-11',
     title: '什麼是 BGP？',
     excerpt: 'BGP 是互聯網的路由大腦，負責告訴全球所有路由器某個 IP 在哪裡、怎麼去。',
     tag: 'AWS',
     readTime: '9 分鐘',
-    slug: '2025/04/11/aws-daily-learn',
+    slug: '2026/04/11/aws-daily-learn',
   },
   {
     date: '2026-04-07',
