@@ -1,0 +1,18 @@
+{
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.git/objects/**": true,
+    "**/build/**": true,
+    "**/.docusaurus/**": true
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.docusaurus": true,
+    "**/build": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/build": true,
+    "**/.docusaurus": true
+  }
+}
